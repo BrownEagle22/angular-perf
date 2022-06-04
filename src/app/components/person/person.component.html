@@ -1,0 +1,18 @@
+<div class="container"
+    [ngClass]="{'selected': isChecked}"
+    (click)="onClick($event.target)">
+    <div style="display: flex;" [ngClass]="{'selected': isChecked}">
+        <div style="display: inline-block">
+        <img [src]="person.picture.medium" alt="">
+        <!-- <img style="height: 70px" src="assets/user-pic.png" alt=""> -->
+        </div>
+        <div style="display: inline-block; padding-left: 15px; padding-top: 9px">
+        <strong>Name: {{person.name.title}} {{person.name.first}} {{person.name.last}}</strong>
+        <div>Gender: {{person.gender}}</div>
+        <div>Age: {{person.dob.age}}</div>    
+        </div>
+    </div>
+
+    <div style="padding-top: 10px">E-Mail: {{person.email}}</div>
+    <div>Phone: {{person.phone}}</div>    
+</div>

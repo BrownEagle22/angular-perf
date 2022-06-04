@@ -1,0 +1,12 @@
+<button (click)="append1k()">Add 1k Rows</button>
+<button (click)="append10k()">Add 10k Rows</button>
+<button (click)="onUpdateAllClick()">Update All Rows</button>
+<button (click)="onUpdate10Click()">Update Every 10 Rows</button>
+<button (click)="onClearClick()">Clear All Rows</button>
+<br>
+<button (click)="swap2rows()">Swap 2 Rows</button>
+<p>Rows: {{people.length}}</p>
+<div *ngFor="let person of people; trackBy: trackById">
+    <app-person [person]="person"></app-person>
+    <hr>
+</div>
